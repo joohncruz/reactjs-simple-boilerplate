@@ -33,3 +33,45 @@ npm install --save-dev react-hot-loader@3.0.0-beta.2
 
 npm install --save-dev standard standard-loader@4
 npm install --save-dev webpack-validator
+
+
+
+
+Stateless vs Statefull
+Possuem um fluxo de renderização unidirecional, dos pais para os filhos utilizando das props.
+Stateless é componentes que não manipulam o estado. 
+'use strict'
+
+import React from 'react'
+
+const Square = ({ color }) => (
+  <div style={{
+    backgroundColor: color,
+    height: '100px',
+    width: '100px'
+  }} />
+)
+
+Square.defaultProps = {
+  color: 'red'
+}
+
+export default Square
+
+
+LIFECYCLE
+
+- mounting / unmonting
+   componentWillMount - O componente vai montar, antes do componente montar para que a gente possa realizar alguma coisa
+   componentDidMount - Quando o componente acabou de ser montado
+   componentWillUnMount - Para saber quando o componente acabou de sera desmontando ou removido da tela.
+
+- updating
+  componentWillReceiveProps (nextProps) - Momento em que o componente vai receber novas propriedades e voce consegue receber as novas propriedades em um array
+  shouldComponentUpdade (nextProps, nexState) => bool - Vai ser executado para saber se o componente deve ou nao ser atualizado
+  componentWillUpdate (nextProps, nexState) - Vai ser atualizado antes da atualização
+  componentDidUpdate - Componente foi atualizado (prevProps, prevState)
+
+Caso use sempre seria super util imprimir estes metodos para saber quando vai usar em cada situação.
+
+  
