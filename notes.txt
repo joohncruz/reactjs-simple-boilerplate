@@ -8,8 +8,8 @@ Configurações do Terminal;
 Configurações de Lint (standard);
 
 
-Sobre o webpack 
-    
+Sobre o webpack
+
     - É um module bundler - webpack.github.io;
     - Gerar arquivo final que será usado no HTML, em ES5;
     - Subir servidor para desenvolvimento;
@@ -39,7 +39,7 @@ npm install --save-dev webpack-validator
 
 Stateless vs Statefull
 Possuem um fluxo de renderização unidirecional, dos pais para os filhos utilizando das props.
-Stateless é componentes que não manipulam o estado. 
+Stateless é componentes que não manipulam o estado.
 'use strict'
 
 import React from 'react'
@@ -74,4 +74,3 @@ LIFECYCLE
 
 Caso use sempre seria super util imprimir estes metodos para saber quando vai usar em cada situação.
 
-  
